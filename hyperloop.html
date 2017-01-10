@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
-<title>Hyperloop News Graph</title>
+<title>News Graph</title>
 
 <body>
 <h2>
-  HyperNews Graph
+  News Graph
 </h2>
 <h3>
   (alpha)
 </h3>
 
-
-<script type='text/javascript' src="//d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script> 
 <!-- <script src="js/d3.v3.min.js"></script> -->
-<script type='text/javascript' src="js/d3.tip.v0.6.3.js"> </script>
-<!-- <script src="d3.tip.v0.6.3.js"></script> -->
+<script type='text/javascript' src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"> </script>
+<!-- <script src="js/d3.tip.v0.6.3.js"></script> -->
+
 <script>
 
 var width = 1280,
@@ -44,7 +44,7 @@ var link = svg.selectAll(".link"),
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide);
 
-d3.json("data.json", function(error, json) {
+d3.json("data_hyperloop.json", function(error, json) {
   if (error) throw error;
 
   root = json;
